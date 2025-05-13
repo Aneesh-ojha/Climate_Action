@@ -1,0 +1,312 @@
+/* Reset + Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+  }
+
+  /* Header */
+  .nasa-header {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .top-bar {
+    display: flex;
+    max-width: 1400px;  /* adjust as needed: e.g., 1000px, 800px */
+    margin: 0 auto; 
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 1px solid #222;
+  }
+  
+  .left-nav, .right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .search-box {
+    background: transparent;
+    border: 1px solid #555;
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  .nav-link {
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .live-tag {
+    color: red;
+    font-size: 1.1rem;
+    border: 1px solid red;
+    padding: 1px 4px;
+    margin-left: 3px;
+    font-family: monospace;
+  }
+  
+  .main-menu {
+    background-color: #111;
+    padding: 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 14px;
+  }
+  
+  .main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }  
+  
+  /*Hero Tag*/
+  .hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: sans-serif;
+    color: white;
+    overflow: hidden;
+    padding-left: 5%;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('../img/bg-learnmore.jpg') no-repeat center center/cover;
+    z-index: 1;
+  }
+  
+  .hero-bg .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to improve text visibility */
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .hero-text p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .hero-text h1,
+  .hero-text p {
+    position: relative;
+    left: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-text h1,
+    .hero-text p {
+      left: 0%; /* Less shift on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-text h1,
+    .hero-text p {
+      left: 0; /* No shift on very small screens */
+    }
+  }
+  
+  .podcast-section {
+    padding: 60px 20px;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .podcast-section h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    max-width: 1200px;
+    margin-bottom: 20px;
+    color: #666;
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+  
+  .podcast-grid {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  
+  .podcast-card {
+    background: #fff;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .podcast-card img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .podcast-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .label {
+    font-size: 1rem;
+    color: gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .podcast-card p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+  } 
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #000;
+        color: #888;
+      }
+
+      /* Responsive Adjustments */
+
+/* Header adjustments for smaller screens */
+@media (max-width: 992px) {
+  .top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .left-nav, .right-nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .main-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+}
+
+/* Hero section scaling */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-text {
+    max-width: 90%;
+    padding: 20px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .hero-text h1,
+  .hero-text p {
+    left: 0;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .top-bar,
+  .main-menu {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .podcast-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .podcast-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  
